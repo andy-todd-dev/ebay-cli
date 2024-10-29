@@ -1,11 +1,11 @@
 {
-  "name": "ebay_cli",
-  "version": "1.0.0",
-  "main": "app.mjs",
+  "name": "ebay-cli",
+  "version": "0.1.0",
+  "main": "cli.mjs",
   "type": "module",
-  "author": "Andrew Todd",
+  "author": "Andrew Todd <email.andy.todd@gmail.com>",
   "license": "MIT",
-  "description": "",
+  "description": "A CLI interface to the Ebay API",
   "dependencies": {
     "commander": "^12.1.0",
     "configstore": "^7.0.0",
