@@ -1,0 +1,7 @@
+LICENSE
+CHANGELOG.MD
+.github
+docker
+node_modules
+.gitignore
+README.md

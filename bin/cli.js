@@ -1,12 +1,12 @@
 #!/usr/bin/env node
 
-import { handleInit } from "./lib/init.js";
-import { handleTransactions } from "./lib/transactions.js";
+import { handleInit } from "../lib/init.js";
+import { handleTransactions } from "../lib/transactions.js";
 import { program } from "commander";
 import Configstore from "configstore";
 
 const config = new Configstore("ebay-cli");
-const app = program.version("1.0.0", "-v, --version");
+const app = program.version("0.1.0", "-v, --version");
 
 app
   .command("config")

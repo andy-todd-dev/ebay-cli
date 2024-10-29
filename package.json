@@ -1,6 +1,6 @@
 {
   "name": "ebay-cli",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "main": "cli.mjs",
   "type": "module",
   "author": "Andrew Todd <email.andy.todd@gmail.com>",
@@ -14,5 +14,11 @@
     "readline-async": "^0.1.0",
     "terminal-link": "^3.0.0",
     "tty-table": "^4.2.3"
+  },
+  "bin": {
+    "ebay": "./bin/cli.js"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
