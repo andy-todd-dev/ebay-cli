@@ -1,23 +1,25 @@
-#!/usr/bin/env node
-
-import {  handleAuthorise } from "../lib/authorise.js";
+#!/usr/bin/env -S node --disable-warning=ExperimentalWarning
+import { handleAuthorise } from "../lib/authorise.js";
 import { handleTransactions } from "../lib/transactions.js";
 import { program } from "commander";
 import Configstore from "configstore";
-import chalk from 'chalk';
+import chalk from "chalk";
+import pkg from "../package.json" with { type: "json" };
 
 const config = new Configstore("ebay-cli");
 
 const checkAuth = (cmd) => {
   if (!config.get("auth")) {
-    console.error(chalk.red('Authentication required!'));
-    console.error(chalk.yellow('Please run:'));
-    console.error(chalk.cyan('ebay authorise <clientId> <certificateId> <redirectUrlName>'));
+    console.error(chalk.red("Authentication required!"));
+    console.error(chalk.yellow("Please run:"));
+    console.error(
+      chalk.cyan("ebay authorise <clientId> <certificateId> <redirectUrlName>")
+    );
     process.exit(1);
   }
 };
 
-const app = program.version("0.1.0", "-v, --version");
+const app = program.version(pkg.version, "-v, --version");
 
 // Commands that don't need auth
 app
@@ -41,7 +43,7 @@ app
   .command("transactions")
   .alias("tx")
   .description("Retrieve transaction data")
-  .hook('preAction', checkAuth)
+  .hook("preAction", checkAuth)
   .option("-f --date-from <string>", "Transactions from this date (ISO)")
   .option("-t --date-to <string>", "Transactions up until this date (ISO)")
   .option("-y --type <string>", "Transactions type")
