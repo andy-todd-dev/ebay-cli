@@ -13,7 +13,7 @@ npm install -g ebay-cli
 Or use with Docker:
 
 ```bash
-docker run -it --rm ghcr.io/matt-weston/ebay-cli:latest
+docker run -it --rm thegeektechworkshop/ebay-cli:latest
 ```
 
 ## Prerequisites
