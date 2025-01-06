@@ -8,7 +8,7 @@
   "description": "A CLI interface to the Ebay API",
   "dependencies": {
     "chalk": "^5.3.0",
-    "commander": "^12.1.0",
+    "commander": "^13.0.0",
     "configstore": "^7.0.0",
     "ebay-api": "^9.1.1",
     "luxon": "^3.5.0",
